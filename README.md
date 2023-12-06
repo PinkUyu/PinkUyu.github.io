@@ -9,6 +9,7 @@ Here is a summary description of the topic. Here is the problem. This is why the
 There is some dataset that we can use to help solve this problem. This allows a machine learning approach. This is how I will solve the problem using supervised/unsupervised/reinforcement/etc. machine learning.
 
 <img width="800" height="500" align="center" src="/assets/IMG/table_descriptor.png">
+
 *Figure 1: Parameters and labeling of mine type dataset. Retrieved from UCI Machine Learning Repository[1]*
 
 We did this to solve the problem. We concluded that...
