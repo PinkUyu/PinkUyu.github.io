@@ -1,4 +1,4 @@
-## My Project <img width="200" height="200" align="right" src="/assets/IMG/new_mine.png">
+## My Project <img width="250" height="250" align="right" src="/assets/IMG/new_mine.png">
 
 I applied machine learning techniques to investigate... Below is my report.
 
