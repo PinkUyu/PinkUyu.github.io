@@ -2,8 +2,6 @@
 
 I applied machine learning techniques to investigate... Below is my report.
 
-***
-
 ## Introduction 
 
 Here is a summary description of the topic. Here is the problem. This is why the problem is important.
