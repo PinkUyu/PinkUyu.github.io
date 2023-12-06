@@ -56,6 +56,6 @@ Here is a brief summary. From this work, the following conclusions can be made:
 Here is how this work could be developed further in a future project.
 
 ## References
-[1] DALL-E 3
+[1] Yilmaz, C., Kahraman, H. T., & Söyler, S. (2018). Passive mine detection and classification method based on hybrid model. IEEE Access, 6, 47870-47888.
 
 [back](./) 
