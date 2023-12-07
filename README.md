@@ -12,7 +12,7 @@ Several methods are currently used for detection. A more recent and unique appli
 
 <img width="800" height="500" align="center" src="/assets/IMG/table_descriptor.png">
 
-*Figure 1: Parameters and labeling of mine type dataset. Retrieved from UCI Machine Learning Repository[1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331)*
+*Figure 1: Parameters and labeling of mine type dataset. Retrieved from UCI Machine Learning Repository [1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331)*
 
 The employment of these methods attempts to provide a model that can accurately predict both the presence of, and type, of mine. Therefore, compounded by field knowledge or the usage of other assisted methods, passive detection can be improved which avoids landmine detonation.
 
