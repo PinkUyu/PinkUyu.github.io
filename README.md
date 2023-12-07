@@ -1,22 +1,24 @@
 ## My Project <img width="250" height="250" align="right" src="/assets/IMG/new_mine.png">
 
-I applied machine learning techniques to investigate... Below is my report.
+I applied machine learning techniques to investigate mine detection and mine type classifcation.
 
 ## Introduction 
 
-Here is a summary description of the topic. Here is the problem. This is why the problem is important.
+For both post- and active battle landmarks, minefields remain a problem for the soldiers and civilians present in the area. Landmines are used as a deterrant for both infrantry and vehicles, and therefore mine detection remains an important feat for military efforts. However, in regions that were previously war-torn, minefields are still leftover once civilians begin to reoccupy the area. This often leads to the deaths of innocent people who wander out, and so the  majority of mine detection efforts are utilized to make these areas livable without danger again.
 
-There is some dataset that we can use to help solve this problem. This allows a machine learning approach. This is how I will solve the problem using supervised/unsupervised/reinforcement/etc. machine learning.
+Several methods are currently used for detection. A more recent and unique application to the problem is the usage of rats to find landmines. Due to their lightweight, high mobility, and sensitive smell, they can be trained to identify likely spots for which landmines have been buried. Specialized vehicles that resist high explosive blasts can also be driven over fields to activate the mines, but this form of disarmament leads to disruption of the surrounding land and still poses some risks, especially when dealing with the stronger landmines. In terms of manual removal, there are two main employed features of detection: active and passive. In active detection, a sensor sends a signal into the ground, and receives a signal back from the mine. This form of detection often leads to the detonation of mines since the signal sent out triggers their explosives, which inherently poses a risk to the land and operators. In passive detection, a sensor simply receives signals from landmines. Althought this avoids the issue of activation, this type of detection is not as effective. In mine discovery, extremely high accuracies are necessary as mistakes can lead to cost lives.
+
+[This dataset](./assets/Mine_Dataset.csv) consists of voltage caused by distortion from the mine, height of the sensor to the ground, and the soil type around the buried mine. The mine types encountered at these respective conditions has been tabulated. This allows for a supervised, classifcation machine learning approach. Since the dataset is labelled and we know what correlates based on the input, the choice of method should be supervised. Since the output is one of five choices, the choice of methods should be a classifcation. Given the dataset's size of 338 instances, approaches such as decision trees, support vector classifcation, and ensemble methods are most appropriate.
 
 <img width="800" height="500" align="center" src="/assets/IMG/table_descriptor.png">
 
-*Figure 1: Parameters and labeling of mine type dataset. Retrieved from UCI Machine Learning Repository[1]*
+*Figure 1: Parameters and labeling of mine type dataset. Retrieved from UCI Machine Learning Repository[1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331)*
 
-We did this to solve the problem. We concluded that...
+The employment of these methods attempts to provide a model that can accurately predict both the presence of, and type, of mine. Therefore, compounded by field knowledge or the usage of other assisted methods, passive detection can be improved which avoids landmine detonation.
 
 ## Data
 
-Here is an overview of the dataset, how it was obtained and the preprocessing steps taken, with some plots!
+The dataset was retrieved from the UCI Machine Learning Repository, and was originally sourced in the study "Passive Mine Detection and Classification Method Based on Hybrid Model" by Cemal Yilmaz, Hamdi Tolga Kahraman, and Salih Söyler.[1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331)
 
 <img width="700" height="500" align="center" src="/assets/IMG/mine_counts.png">
 
@@ -56,6 +58,4 @@ Here is a brief summary. From this work, the following conclusions can be made:
 Here is how this work could be developed further in a future project.
 
 ## References
-[1] Yilmaz, C., Kahraman, H. T., & Söyler, S. (2018). Passive mine detection and classification method based on hybrid model. IEEE Access, 6, 47870-47888.
-
-[back](./) 
+[1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331) Yilmaz, C., Kahraman, H. T., & Söyler, S. (2018). Passive mine detection and classification method based on hybrid model. IEEE Access, 6, 47870-47888.
