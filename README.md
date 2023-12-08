@@ -26,15 +26,41 @@ The dataset was retrieved from the UCI Machine Learning Repository, and was orig
 
 ## Modelling
 
-Here are some more details about the machine learning approach, and why this was deemed appropriate for the dataset. 
+Given the nature of the problem set, machine learning models such as decision trees and support vectors are the most appropriate. In general, these can be improved with the K-Nearest Neighbors or various ensemble methods as well. In this report, these models were utilized as well as comparisons to other models that would normally be deemed non-classical for this dataset, such as a neural network.
 
-The model might involve optimizing some quantity. You can include snippets of code if it is helpful to explain things.
+The separation and processing of the data for modelling is as follows:
 
 ```python
+X_data=mines.drop(['M'],axis=1).values #columns except for M
+Y_data=mines['M'].values #M column
+Y_data = Y_data.reshape(-1,1)
 
+Y_binary_data = (Y_data >= 2).astype(int)
+
+#split data into training and testing
+test_size = 0.1
+X_train, X_test, Y_train, Y_test, Y_binary_train, Y_binary_test = train_test_split(X_data, Y_data, Y_binary_data, test_size=test_size, random_state=3)
+```
+The X_data stores the V, H, and S categories, Y_data stores values from 1-5 depending on the mine type, and Y_binary_data converts Y_data into 0 or 1 depending on the absence of (0) or presense of (1) a landmine.
+
+The general format utilized for each machine learning model for fitting the data is as follows:
+
+```python
+single_tree = DecisionTreeClassifier(max_depth=max_depth)
+single_tree.fit(X_train, Y_train)
+
+Y_pred_single = single_tree.predict(X_test).reshape(-1, 1)
+
+print("Single Tree")
+print(single_tree.feature_importances_)
+print(accuracy_score(Y_test, Y_pred_single))
+print(single_tree.score(X_data, Y_data))
+ConfusionMatrixDisplay.from_predictions(Y_test, Y_pred_single)
+plt.show()
+print()
 ```
 
-This is how the method was developed.
+In the above implementation, a decision tree model is fit to the training data. The predicted values are then produced from the model. For the models that have the appropriate attributes, the feature importances were retrieved. Additionally, for each model, the accuracy with respect to the test data was calculated. In order to test the generalization of each model, the accuracy of the model against the entire dataset was also calculated. These accuracies were then represented via a confusion matrix.
 
 ## Results
 
