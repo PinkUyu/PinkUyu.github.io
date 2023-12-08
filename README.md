@@ -65,6 +65,8 @@ In the above implementation, a decision tree model is fit to the training data. 
 
 ## Results
 
+### Decision Tree
+
 Figure X shows... [description of Figure X].
 
 ## Discussion
