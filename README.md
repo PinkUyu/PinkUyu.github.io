@@ -53,11 +53,12 @@ Y_pred_single = single_tree.predict(X_test).reshape(-1, 1)
 
 print("Single Tree")
 print(single_tree.feature_importances_)
-print(accuracy_score(Y_test, Y_pred_single))
-print(single_tree.score(X_data, Y_data))
+single_acc = accuracy_score(Y_test, Y_pred_single)
+single_score = single_tree.score(X_data, Y_data)
+print(single_acc)
+print(single_score)
 ConfusionMatrixDisplay.from_predictions(Y_test, Y_pred_single)
 plt.show()
-print()
 ```
 
 In the above implementation, a decision tree model is fit to the training data. The predicted values are then produced from the model. For the models that have the appropriate attributes, the feature importances were retrieved. Additionally, for each model, the accuracy with respect to the test data was calculated. In order to test the generalization of each model, the accuracy of the model against the entire dataset was also calculated. These accuracies were then represented via a confusion matrix.
