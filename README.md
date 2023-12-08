@@ -67,7 +67,109 @@ In the above implementation, a decision tree model is fit to the training data. 
 
 ### Decision Tree
 
-Figure X shows... [description of Figure X].
+<img width="500" height="500" align="center" src="/assets/IMG/decision_tree_binary_matrix.png">
+
+*Figure 3: Confusion matrix of single decision tree (max depth of 8) for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/decision_tree_matrix.png">
+
+*Figure 4: Confusion matrix of single decision tree (max depth of 8) for mine identification*
+
+### Random Forest
+
+<img width="500" height="500" align="center" src="/assets/IMG/random_forest_binary_matrix.png">
+
+*Figure 5: Confusion matrix of random forest (each with max depth of 8) for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/random_forest_matrix.png">
+
+*Figure 6: Confusion matrix of random forest (each with max depth of 8) for mine identification*
+
+### Bagging
+
+<img width="500" height="500" align="center" src="/assets/IMG/bagging_binary_matrix.png">
+
+*Figure 7: Confusion matrix of bagging for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/bagging_matrix.png">
+
+*Figure 8: Confusion matrix of bagging for mine identification*
+
+### AdaBoost
+
+<img width="500" height="500" align="center" src="/assets/IMG/adaboost_binary_matrix.png">
+
+*Figure 9: Confusion matrix of adaboost for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/adaboost_matrix.png">
+
+*Figure 10: Confusion matrix of adaboost for mine identification*
+
+### Support Vector
+
+<img width="500" height="500" align="center" src="/assets/IMG/svc_binary_matrix.png">
+
+*Figure 11: Confusion matrix of support vector for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/svc_matrix.png">
+
+*Figure 12: Confusion matrix of support vector for mine identification*
+
+### Neural Network
+
+<img width="500" height="500" align="center" src="/assets/IMG/neural_binary_matrix.png">
+
+*Figure 13: Confusion matrix of neural network (2 hidden layers of 5 nodes each) for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/neural_matrix.png">
+
+*Figure 14: Confusion matrix of neural network (2 hidden layers of 5 nodes each) for mine identification*
+
+### K-Nearest Neighbors
+
+<img width="500" height="500" align="center" src="/assets/IMG/knn_binary_matrix.png">
+
+*Figure 15: Confusion matrix of k-nearest neighbors (weighted by distance) for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/knn_matrix.png">
+
+*Figure 16: Confusion matrix of k-nearest neighbots (weighted by distance) for mine identification*
+
+### Hard Voting
+
+<img width="500" height="500" align="center" src="/assets/IMG/voting_binary_matrix.png">
+
+*Figure 17: Confusion matrix of hard voting (forest, bagging, ada, knn) for mine detection*
+
+<img width="500" height="500" align="center" src="/assets/IMG/voting_binary_all.png">
+
+*Figure 18: Confusion matrix of hard voting (forest, bagging, ada, knn) for mine detection, extrapolated to all data*
+
+<img width="500" height="500" align="center" src="/assets/IMG/voting_matrix.png">
+
+*Figure 19: Confusion matrix of hard voting (forest, bagging, ada, knn) for mine identification*
+
+<img width="500" height="500" align="center" src="/assets/IMG/voting_matrix_all.png">
+
+*Figure 20: Confusion matrix of hard voting (forest, bagging, ada, knn)for mine identification, extrapolated to all data*
+
+### Model Comparison
+
+<img width="800" height="500" align="center" src="/assets/IMG/accuracy_test_binary.png">
+
+*Figure 21: Compared accuracy of models for mine detection against test data*
+
+<img width="800" height="500" align="center" src="/assets/IMG/accuracy_all_binary.png">
+
+*Figure 22: Compared accuracy of models for mine detection against all data*
+
+<img width="800" height="500" align="center" src="/assets/IMG/accuracy_test.png">
+
+*Figure 23: Compared accuracy of models for mine identification against test data*
+
+<img width="800" height="500" align="center" src="/assets/IMG/accuracy_all.png">
+
+*Figure 24: Compared accuracy of models for mine identification against all data*
 
 ## Discussion
 
