@@ -155,7 +155,7 @@ Click [here](#summary) to jump to results summary and model comparison.
 
 *Figure 20: Confusion matrix of hard voting (forest, bagging, ada, knn)for mine identification, extrapolated to all data*
 
-### Model Comparison <a id="summary"?</a>
+### Model Comparison <a id="summary"></a>
 
 <img width="800" height="500" align="center" src="/assets/IMG/accuracy_test_binary.png">
 
