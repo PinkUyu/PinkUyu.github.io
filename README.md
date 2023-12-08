@@ -18,7 +18,7 @@ The employment of these methods attempts to provide a model that can accurately 
 
 ## Data
 
-The dataset was retrieved from the UCI Machine Learning Repository, and was originally sourced in the study "Passive Mine Detection and Classification Method Based on Hybrid Model" by Cemal Yilmaz, Hamdi Tolga Kahraman, and Salih Söyler.[1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331). Figure 2 shows the distribution of mine types within the data. The dataset is almost perfectly balanced between the mine types, with only a 9% difference (6 samples) between the most and least populated types. The data has also come pre-normalized, such that all values of voltage, height, and soil type exist as values between 0 and 1 inclusive.
+The dataset was retrieved from the UCI Machine Learning Repository, and was originally sourced in the study "Passive Mine Detection and Classification Method Based on Hybrid Model" by Cemal Yilmaz, Hamdi Tolga Kahraman, and Salih Söyler[1](https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=8443331). Figure 2 shows the distribution of mine types within the data. The dataset is almost perfectly balanced between the mine types, with only a 9% difference (6 samples) between the most and least populated types. The data has also come pre-normalized, such that all values of voltage, height, and soil type exist as values between 0 and 1 inclusive.
 
 <img width="700" height="500" align="center" src="/assets/IMG/mine_counts.png">
 
