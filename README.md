@@ -65,6 +65,8 @@ In the above implementation, a decision tree model is fit to the training data. 
 
 ## Results
 
+Click [here](#summary) to jump to results summary and model comparison.
+
 ### Decision Tree
 
 <img width="500" height="500" align="center" src="/assets/IMG/decision_tree_binary_matrix.png">
@@ -153,7 +155,7 @@ In the above implementation, a decision tree model is fit to the training data. 
 
 *Figure 20: Confusion matrix of hard voting (forest, bagging, ada, knn)for mine identification, extrapolated to all data*
 
-### Model Comparison
+### Model Comparison <a id="summary"?</a>
 
 <img width="800" height="500" align="center" src="/assets/IMG/accuracy_test_binary.png">
 
