@@ -69,91 +69,143 @@ Click [here](#summary) to jump to results summary and model comparison.
 
 ### Decision Tree
 
+The decision tree utilized was set to have a maximum depth of 8.
+
 <img width="500" height="500" align="center" src="/assets/IMG/decision_tree_binary_matrix.png">
 
 *Figure 3: Confusion matrix of single decision tree (max depth of 8) for mine detection*
+
+The decision tree predicts mine detection at an 88.2% accuracy for the testing data (Figure 3), which improves to 97.6% for the total dataset. For the features of voltage, height, and soil, the importances are 63.6%, 15.5%, and 20.8% respectively.
 
 <img width="500" height="500" align="center" src="/assets/IMG/decision_tree_matrix.png">
 
 *Figure 4: Confusion matrix of single decision tree (max depth of 8) for mine identification*
 
+The decision tree predicts mine identification at a 55.9% accuracy for the testing data (Figure 4), which improves to 79.9% for the total dataset. For the features of voltage, height, and soil, the importances are 63.6%, 19.1%, and 17.3% respectively.
+
 ### Random Forest
+
+The random forest decision trees were set to have a maximum depth of 8, with 100 estimators utilized.
 
 <img width="500" height="500" align="center" src="/assets/IMG/random_forest_binary_matrix.png">
 
 *Figure 5: Confusion matrix of random forest (each with max depth of 8) for mine detection*
 
+The random forest predicts mine detection at an 88.2% accuracy for the testing data (Figure 5), which improves to 98.5% for the total dataset. For the features of voltage, height, and soil, the importances are 73.2%, 16.8%, and 1.0% respectively.
+
 <img width="500" height="500" align="center" src="/assets/IMG/random_forest_matrix.png">
 
 *Figure 6: Confusion matrix of random forest (each with max depth of 8) for mine identification*
 
+The random forest predicts mine identification at a 61.7% accuracy for the testing data (Figure 6), which improves to 93.5% for the total dataset. For the features of voltage, height, and soil, the importances are 71.2%, 17.4%, and 11.4% respectively.
+
 ### Bagging
+
+The bagging model utilized uses a decision tree classifier as its base estimator. Random subsets of data are taken in a bootstrap fashion (taken with replacement), and aggregated together into a final prediction.
 
 <img width="500" height="500" align="center" src="/assets/IMG/bagging_binary_matrix.png">
 
 *Figure 7: Confusion matrix of bagging for mine detection*
 
+The bagging classifier predicts mine detection at a 91.2% accuracy for the testing data (Figure 7). For the total dataset, this improves to a 97.9% accuracy. 
+
 <img width="500" height="500" align="center" src="/assets/IMG/bagging_matrix.png">
 
 *Figure 8: Confusion matrix of bagging for mine identification*
 
+The bagging classifier predicts mine identification at a 61.7% accuracy for the testing data (Figure 8). For the total dataset, this improves to a 92.9% accuracy. 
+
 ### AdaBoost
+
+The adaboost classifier utilizes the aforementioned decision tree classifer as its base estimator. Adaboost improves upon more difficult cases by focusing on incorrectly classified instances over each new iteration.
 
 <img width="500" height="500" align="center" src="/assets/IMG/adaboost_binary_matrix.png">
 
 *Figure 9: Confusion matrix of adaboost for mine detection*
 
+The adaboost classifier predicts mine detection at an 88.2% accuracy for the testing data (Figure 9). This improves to a 98.8% accuracy over the entire dataset.
+
 <img width="500" height="500" align="center" src="/assets/IMG/adaboost_matrix.png">
 
 *Figure 10: Confusion matrix of adaboost for mine identification*
 
+The adaboost classifier predicts mine identification at a 55.9% accuracy for the testing data (Figure 10). This improves to a 95.6% accuracy over the entire dataset.
+
 ### Support Vector
+
+The support vector classifier uses a one-to-one separation approach in this multiclassification case. The kernel utilized was the radial basis function (rbf).
 
 <img width="500" height="500" align="center" src="/assets/IMG/svc_binary_matrix.png">
 
 *Figure 11: Confusion matrix of support vector for mine detection*
 
+The support vector classifier predicts mine detection at an 82.4% accuracy for the testing data (Figure 11). This decreases to a 79.0% accuracy over the entire dataset.
+
 <img width="500" height="500" align="center" src="/assets/IMG/svc_matrix.png">
 
 *Figure 12: Confusion matrix of support vector for mine identification*
 
+The support vector classifier predicts mine identifcation at a 47.0% accuracy for the testing data (Figure 12). This improves to a 53.6% accuracy over the entire dataset.
+
 ### Neural Network
+
+The neural network utilized consists of 2 hidden layers, each with 5 nodes.
 
 <img width="500" height="500" align="center" src="/assets/IMG/neural_binary_matrix.png">
 
 *Figure 13: Confusion matrix of neural network (2 hidden layers of 5 nodes each) for mine detection*
 
+The neural network predicts mine detection at an 88.2% accuracy for the testing data (Figure 13). This decreases to a 86.4% accuracy over the entire dataset.
+
 <img width="500" height="500" align="center" src="/assets/IMG/neural_matrix.png">
 
 *Figure 14: Confusion matrix of neural network (2 hidden layers of 5 nodes each) for mine identification*
 
+The neural network predicts mine identifcation at a 58.8% accuracy for the testing data (Figure 14). This decreases to a 51.8% accuracy over the entire dataset.
+
 ### K-Nearest Neighbors
+
+The algorithm utilized weighted distance to determine neighbor importance.
 
 <img width="500" height="500" align="center" src="/assets/IMG/knn_binary_matrix.png">
 
 *Figure 15: Confusion matrix of k-nearest neighbors (weighted by distance) for mine detection*
 
+The k-nearest neighbors predicts mine detection at a 70.6% accuracy for the testing data (Figure 15). This improves to a 97.0% accuracy over the entire dataset.
+
 <img width="500" height="500" align="center" src="/assets/IMG/knn_matrix.png">
 
 *Figure 16: Confusion matrix of k-nearest neighbots (weighted by distance) for mine identification*
 
+The k-nearest neighbors predicts mine identification at a 44.1% accuracy for the testing data (Figure 16). This improves to a 94.4% accuracy over the entire dataset.
+
 ### Hard Voting
+
+Voting classifier that takes in the random forest, bagging, adaboost, and k-nearest neighbors classifiers. Hard voting utilized such that majority decision wins.
 
 <img width="500" height="500" align="center" src="/assets/IMG/voting_binary_matrix.png">
 
 *Figure 17: Confusion matrix of hard voting (forest, bagging, ada, knn) for mine detection*
 
+The voting classifier predicts mine detection at a 91.2% accuracy for the testing data (Figure 17).
+
 <img width="500" height="500" align="center" src="/assets/IMG/voting_binary_all.png">
 
 *Figure 18: Confusion matrix of hard voting (forest, bagging, ada, knn) for mine detection, extrapolated to all data*
+
+The voting classifier predicts mine detection at a 99.1% accuracy for all data (Figure 18).
 
 <img width="500" height="500" align="center" src="/assets/IMG/voting_matrix.png">
 
 *Figure 19: Confusion matrix of hard voting (forest, bagging, ada, knn) for mine identification*
 
+The voting classifier predicts mine identification with a 61.8% accuracy for testing data (Figure 19).
+
 <img width="500" height="500" align="center" src="/assets/IMG/voting_matrix_all.png">
 
 *Figure 20: Confusion matrix of hard voting (forest, bagging, ada, knn)for mine identification, extrapolated to all data*
+
+The voting classifier predicts mine identification with a 95.9% accuracy for all data (Figure 19).
 
 ### Model Comparison <a id="summary"></a>
 
